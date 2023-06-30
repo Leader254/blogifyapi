@@ -4,7 +4,7 @@ import { loginRequired } from "../Controllers/authentication.js";
 
 const router = express.Router();
 router.get("/",loginRequired, getAllPosts),
-router.get("/:id", getPost),
+router.get("/:id",loginRequired, getPost),
 router.post("/",loginRequired, addPost),
 router.delete("/:id", deletePost)
 router.put("/:id", updatePost)
